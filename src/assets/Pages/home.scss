@@ -1,0 +1,191 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 80px);
+
+        .text {
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #96a8c9;
+        }
+
+        .scroll-arrow {
+            width: 40px;
+            height: 40px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: #fff transparent transparent #fff;
+            animation: arrowAnimation 1.5s infinite;
+            transform: rotate(-135deg);
+            margin-top: 130px;
+        }
+    }
+
+    .skills {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            color: #e3e3fd;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin: 20px 20px;
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    .projects {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            color: #e3e3fd;
+            margin-bottom: 25px;
+        }
+
+        .cardWrapper {
+            display: flex;
+
+            align-items: center;
+
+            .card {
+                margin: 15px;
+                z-index: 10;
+                box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 200px;
+
+                }
+
+                .cardTitle {
+                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+                    width: 350px;
+                    height: auto;
+                    padding: 5px;
+
+                    h3,
+                    p {
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 250px;
+        h3 {
+            color: #e3e3fd;
+            margin-bottom: 25px;
+        }
+
+        #form {
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+
+            .inputWrapper{
+                display: flex;
+                align-items: center;
+                margin-bottom: 7px;           
+
+                i{
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #96A8C9;
+                    border-radius: 10px 0 0 10px;
+                }
+
+                input{
+                    height: 35px;
+                    width: 325px;
+                    border: none;
+                    outline: none;
+                    text-indent: 10px;
+                    border-radius: 0 10px 10px 0;
+                    background-color: #e0e0e0;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: medium;
+                }
+            }
+
+            textarea{
+                resize: none;
+                width: 360px;
+                border: none;
+                outline: none;
+                text-indent: 10px;
+                background-color: #e0e0e0;
+                border-radius: 10px;
+                margin-bottom: 7px;
+                font-family: 'Roboto', sans-serif;
+                font-size: medium;
+            }
+
+            input[type=submit]{
+                border-radius: 10px;
+                height: 35px;
+                background-color: #96A8C9;
+                cursor: pointer;
+                border: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: medium;
+            }
+        }
+    }
+}
+
+@keyframes arrowAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cardWrapper {
+        flex-direction: column;
+    }
+}
