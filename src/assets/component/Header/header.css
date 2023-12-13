@@ -24,25 +24,13 @@ header .right ul li {
   margin: 8px;
   cursor: pointer;
 }
-header .right .menu {
-  background: transparent;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: none;
-  color: #e3e3fd;
-  cursor: pointer;
-  display: none;
+header .right ul li a:hover {
+  color: #8c8cb5;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 750px) {
   .navigation {
     display: none;
-  }
-  .right .menu {
-    display: block;
   }
 }/*# sourceMappingURL=header.css.map */

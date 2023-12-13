@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #96a8c9;
+            color: #96A8C9;
         }
 
         .scroll-arrow {
@@ -68,7 +68,6 @@
 
         .cardWrapper {
             display: flex;
-
             align-items: center;
 
             .card {
@@ -78,22 +77,50 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: hidden;
 
                 img {
                     width: 100%;
                     height: 200px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        scale: 1.4;
+                    }
 
                 }
 
                 .cardTitle {
-                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+                    background: #e0e0e0;
                     width: 350px;
                     height: auto;
                     padding: 5px;
+                    z-index: 11;
+                    display: flex;
+                    justify-content: space-between;
 
-                    h3,
-                    p {
-                        font-family: 'Roboto', sans-serif;
+                    .cardInfo {
+                        h3,
+                        p {
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+
+                    .cardLinks{
+                        display: flex;
+                        a{
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            border: none;
+                            background-color: #96A8C9;
+                            color: black;
+                            margin-left: 5px;
+                            
+                        }
                     }
                 }
             }
@@ -106,6 +133,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 250px;
+
         h3 {
             color: #e3e3fd;
             margin-bottom: 25px;
@@ -116,12 +144,12 @@
             display: flex;
             flex-direction: column;
 
-            .inputWrapper{
+            .inputWrapper {
                 display: flex;
                 align-items: center;
-                margin-bottom: 7px;           
+                margin-bottom: 7px;
 
-                i{
+                i {
                     width: 35px;
                     height: 35px;
                     display: flex;
@@ -131,7 +159,7 @@
                     border-radius: 10px 0 0 10px;
                 }
 
-                input{
+                input {
                     height: 35px;
                     width: 325px;
                     border: none;
@@ -144,7 +172,7 @@
                 }
             }
 
-            textarea{
+            textarea {
                 resize: none;
                 width: 360px;
                 border: none;
@@ -157,7 +185,7 @@
                 font-size: medium;
             }
 
-            input[type=submit]{
+            input[type=submit] {
                 border-radius: 10px;
                 height: 35px;
                 background-color: #96A8C9;

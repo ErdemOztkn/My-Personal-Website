@@ -38,7 +38,6 @@ export default function Header() {
             duration={500}
           >Contact</Link></li>
         </ul>
-        <button className='menu'><FiMenu size={24} /></button>
       </div>
     </header>
   )

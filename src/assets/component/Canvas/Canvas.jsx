@@ -175,8 +175,8 @@ const Canvas = () => {
                 let ox = x - pointerX,
                     oy = y - pointerY;
 
-                velocity.tx = velocity.tx + (ox / 32 * scale) * (touchInput ? 1 : -1);
-                velocity.ty = velocity.ty + (oy / 32 * scale) * (touchInput ? 1 : -1);
+                velocity.tx = velocity.tx + (ox / 64 * scale) * (touchInput ? 1 : -1);
+                velocity.ty = velocity.ty + (oy / 64 * scale) * (touchInput ? 1 : -1);
 
             }
 
@@ -199,7 +199,7 @@ const Canvas = () => {
 
             movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
 
-            event.preventDefault();
+
 
         }
 
@@ -221,6 +221,8 @@ const Canvas = () => {
         const handleTouchMove = (event) => {
             onTouchMove(event);
         };
+
+
 
         const handleMouseLeave = () => {
             onMouseLeave();
