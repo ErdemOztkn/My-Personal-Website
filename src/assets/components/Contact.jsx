@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FiUser, FiMail } from 'react-icons/fi';
-import './contact.css';
 
 export default function Contact() {
     const [formData, setFormData] = useState({

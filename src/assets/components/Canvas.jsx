@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import './canvas.css'
 
 const Canvas = () => {
     const canvasRef = useRef(null);
@@ -175,8 +174,8 @@ const Canvas = () => {
                 let ox = x - pointerX,
                     oy = y - pointerY;
 
-                velocity.tx = velocity.tx + (ox / 64 * scale) * (touchInput ? 1 : -1);
-                velocity.ty = velocity.ty + (oy / 64 * scale) * (touchInput ? 1 : -1);
+                velocity.tx = velocity.tx + (ox / 32 * scale) * (touchInput ? 1 : -1);
+                velocity.ty = velocity.ty + (oy / 32 * scale) * (touchInput ? 1 : -1);
 
             }
 
